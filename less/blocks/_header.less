@@ -1,0 +1,158 @@
+.header{
+  position: relative;
+  height: 406px;
+  width: 100%;
+  // padding-top: 36px;
+  background-color: rgb(71, 71, 71);
+
+  // @media (min-height: 530px){
+  //   height: calc(~"100vh - 78px");
+  // } 
+
+  // сам доделал на свое усмотрение
+  @media (min-width: 480px){
+    height: 430px;
+  } 
+
+  @media (min-width: 980px){
+    height: 800px;
+  } 
+}
+.header-nav-wrapper{
+  position: absolute;
+  z-index: 2;
+  top: 36px;
+  left: 0;
+  width: 100%;
+}
+
+.header-nav-row {
+  display: flex;
+  justify-content: space-between;
+  align-items:flex-start;
+  margin-bottom: 60px;/*до header__title */
+
+  @media (min-width: 980px){
+    align-items:center;
+    margin-bottom: 150px;/*до header__title */
+  }
+}
+
+.header-nav {
+  display: none;
+
+  @media (min-width: 980px){
+    display: flex;
+    color: #404040;
+    font-family: 'Teko', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+  }
+}
+.header-nav-link {
+  color: #404040;
+  margin-right: 52px;
+  position: relative;
+}
+.header-nav-link:last-child{
+  margin-right: 0;
+}
+.header-nav-link:hover, .header-nav-link--active{
+  color: #004cff;
+}
+.header-nav-link::after{
+  position: absolute;
+  right: -28px;
+  top: 6px;
+  content:'';
+  display: block;
+  width: 6px;
+  height: 6px;
+  background-color: #004cff;
+
+  pointer-events: none;/*для того чтобы отключить ссылку на ромбик*/
+
+  transform: rotate(45deg);
+
+}
+
+.header-nav-link:last-child::after{
+  display: none;
+}
+
+.header-buttom {
+  display: none;
+
+  @media (min-width: 980px){
+    display: inline-block;
+    height: 66px;
+    padding: 23px 38px 0 38px;
+    line-height: 1;
+    background-color: #004cff;
+
+    
+    color: #ffffff;
+    font-family: 'Teko', sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.45px;
+    
+    transition: background-color 0.2s ease-in;
+  }
+  
+}
+.header-buttom:hover{
+  background-color: #0a3fbb;
+}
+
+.header__prome {
+  max-width: 400px;
+  
+}
+.header__title {
+  font-size: 42px;
+  margin-bottom: 60px;
+  color: #ffffff;
+  font-family: 'Teko', sans-serif;
+  font-weight: 700;
+  line-height: 1.05;
+  letter-spacing: 2.73px;
+
+  @media (min-width: 480px){
+    font-size: 52px;
+  }
+  
+  @media (min-width: 980px){
+    font-size: 68px;
+  }
+  
+}
+.header__prome-btn {
+  display: inline-block;
+  padding: 14px 48px 0 48px;
+  height: 61px;
+  border: 6px solid #ffffff;
+
+  
+  color: #ffffff;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: uppercase;
+
+  transition: border-color 0.2s ease-in, color 0.2s ease-in;
+}
+
+.header__prome-btn:hover{
+  color:#ffd03b;
+  border-color: #ffd03b;
+}
+.header__nav-button{
+
+  @media (min-width: 980px){
+    display: none;
+  }
+}

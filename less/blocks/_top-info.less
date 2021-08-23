@@ -1,0 +1,27 @@
+.top-info{
+  padding: 30px 0 20px 0;
+  
+  @media (min-width: 992px){
+    padding: 44px 0 60px 0;
+  }
+}
+.top-info__row{
+  display: flex;
+  justify-content: space-between;
+  // margin-bottom: 44px;
+  margin-bottom: 40px;
+  flex-direction: column;
+
+  &:last-child{
+    margin-bottom: 0;
+  }
+  
+  @media (min-width: 740px){
+    flex-direction: row;
+    margin-bottom: 0;
+  }
+
+  @media (min-width: 980px){
+    margin-bottom: 0;
+  }
+}

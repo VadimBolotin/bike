@@ -1,0 +1,36 @@
+.socials{
+  display: flex;
+  justify-content: flex-start;
+  /* margin-bottom: 66px; */
+  // margin-bottom: 30px;
+
+  @media (min-width: 992px){
+    justify-content: space-between;
+    // margin-bottom: 60px;
+  }
+
+}
+.socials__item {
+  // flex-shrink: 0; чтобы иконки не сжимались, но так как мы убрали margin right на 992 - нам не нужна этот атрибут
+  margin-right: 15px;
+  font-size: 24px;
+  border-radius: 50%;
+  width: 50px;
+  height: 51px;
+  background-color: #004cff;
+
+  /* позиционируем иконки в центр */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+
+  &:last-child{
+    margin-right: 0;
+  }
+
+  @media (min-width: 992px){
+    margin-right: 0;
+  }
+}
